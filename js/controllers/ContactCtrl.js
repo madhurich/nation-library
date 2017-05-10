@@ -1,3 +1,8 @@
-app.controller('ContactCtrl', ['$scope', function($scope){
+angular.module('education')
+		.controller('ContactCtrl', ContactCtrlFunc);
+
+ContactCtrlFunc.$inject = ['$scope'];
+
+function ContactCtrlFunc($scope){
 	
-}]);
+}

@@ -1,9 +1,28 @@
-app.controller('NewBooksCtrl', ['$scope', '$http', function($scope, $http){
-	$http.get('js/services/books.json')
-	     .success(function(data){
-          $scope.books = data;
-	      })
-	     .error(function(err){
-	     	return err;
-	     });
-}]);
+(function(){
+		angular.module('education')
+			.controller('NewBooksCtrl', newBooksCtrlFunc);
+
+	newBooksCtrlFunc.$inject = ['$scope', '$http', 'booksService', 'logger'];
+
+	function newBooksCtrlFunc($scope, $http, booksService, logger){
+		var vm = this;
+		vm.books = null;
+
+		activate();
+
+		function activate(){
+			return getBooks().then(function(){
+				logger.info('activated books');
+			});
+		}
+		
+	}
+
+	function getBooks(){
+		return booksService.getBooks()
+				.then(function(data){
+					vm.books = data;
+					return vm.books;
+				});
+	}
+})();

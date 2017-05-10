@@ -6,26 +6,26 @@
 			
 		</div>
 		<h2>Testimonials</h2>
-		<div class="col-lg-9 dep-aside" ng-repeat="x in books">
+		<div class="col-lg-9 dep-aside" ng-repeat="book in nc.books">
 			<div class="row">
 				<div class="col-lg-7">
 					<!-- list of details -->
 					<ul>
-						<li><strong>Author: </strong>{{x.author}}</li>
-						<li><strong>Publication Info: </strong>{{x.publicationinfo}}</li>
-						<li><strong>Edition: </strong>{{x.edition}}</li>
-						<li><strong>Series: </strong>{{x.series}}</li>
-						<li><strong>Related works: </strong>{{x.relatedworks}}</li>
+						<li><strong>Author: </strong>{{book.author}}</li>
+						<li><strong>Publication Info: </strong>{{book.publicationinfo}}</li>
+						<li><strong>Edition: </strong>{{book.edition}}</li>
+						<li><strong>Series: </strong>{{book.series}}</li>
+						<li><strong>Related works: </strong>{{book.relatedworks}}</li>
 					</ul>
 				</div>
 				<div class="col-lg-5">
 					<!-- image of book -->
-					<img class="img-responsive img-thumbnail" ng-src="{{x.cover}}" width="150" height="120" style="float: right;">
+					<img class="img-responsive img-thumbnail" ng-src="{{book.cover}}" width="150" height="120" style="float: right;">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<p><strong>Summary: </strong>{{x.summary}}</p>
+					<p><strong>Summary: </strong>{{book.summary}}</p>
 				</div>
 			</div>
 		</div>

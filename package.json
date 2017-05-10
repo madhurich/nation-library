@@ -1,0 +1,22 @@
+{
+  "name": "nation-refactor",
+  "version": "1.0.0",
+  "description": "Nation Library is a website built primarily using AngularJS 1 that showcases information and resources available in the library. Individual pages are present to explain what kind of services are offered in each section.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhurich/nation-library.git"
+  },
+  "author": "Madhuri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhurich/nation-library/issues"
+  },
+  "homepage": "https://github.com/madhurich/nation-library#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
