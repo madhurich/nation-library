@@ -1,11 +1,12 @@
 (function(){
+	'use strict';
 	angular.module('education')
-		.factory('booksService', getBooksService);
+		.factory('booksService', booksService);
+		//a = 12;
 
+	booksService.$inject = ['$http', '$log'];
 
-	getBooksService.$inject = ['$http', 'logger'];
-
-	function getBooksService($http, logger){
+	function booksService($http, $log){
 		getBooks();
 		return {
 			getBooks: getBooks
@@ -17,11 +18,12 @@
 						.catch(getBooksFailure);
 
 			function getBooksComplete(data){
-				return data;
+				//console.log(data);
+				return data.data;
 			}
 
-			function getBooksFailure(looger){
-				return logger.error('failed to get books', err);
+			function getBooksFailure($log){
+				return $log.error('failed to get books', err);
 			}			
 		}
 	}		
